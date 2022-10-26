@@ -31,7 +31,10 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+David Stewart https://github.com/Dav3ster
+David Truitt https://github.com/ddtruitt
+Zain Khawaja https://github.com/ZainKhawaja98
+Alegro Godley https://github.com/Galegro2022
 
 If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 
