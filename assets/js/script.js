@@ -13,7 +13,7 @@ var cityformEl = document.getElementById("city-form")
       console.log(data);
     });
   
-    fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=${cityInput}&categories="resturants"`,{
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=${cityInput}&categories="restaurants"`,{
         headers:{
             authorization: "Bearer " + Yapi_key
         }
@@ -26,4 +26,3 @@ var cityformEl = document.getElementById("city-form")
     });
    
 })
-
