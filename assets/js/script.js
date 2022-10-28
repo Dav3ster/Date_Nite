@@ -5,7 +5,7 @@ var cityformEl = document.getElementById("city-form")
     var cityInput = document.getElementById('citySelection').value;
     event.preventDefault();
 
-    fetch(`https://app.ticketmaster.com/discovery/v2/events.json?apikey=${Tapi_key}`)
+    fetch(`https://app.ticketmaster.com/discovery/v2/events.json?city=${cityInput}&apikey=${Tapi_key}`)
     .then(function (response) {
       return response.json();
     })
@@ -13,7 +13,7 @@ var cityformEl = document.getElementById("city-form")
       console.log(data);
     });
   
-    fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=${cityInput}`,{
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=${cityInput}&categories="resturants"`,{
         headers:{
             authorization: "Bearer " + Yapi_key
         }
