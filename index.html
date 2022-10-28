@@ -10,8 +10,8 @@
 </head>
 <body>
     <div class="jumbotron text-center">
-        <form class="form-inline" method = "GET" action = "{% url 'search' %}" >
-            <input class="form-control mr-sm-2" name="query"  type="text" placeholder="Zip Code or City/Town">
+        <form class="form-inline" id="city-form" method = "GET" action = "{% url 'search' %}" >
+            <input class="form-control mr-sm-2" id="citySelection" name="query"  type="text" placeholder="Zip Code or City/Town">
             <button class="btn btn-outline-success  my-2 my-sm-0" type="submit">Find Events</button>
         </form>
       </div>
