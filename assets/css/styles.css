@@ -1,4 +1,31 @@
+html {
+  min-height: 100vh;
+}
+body {
+  min-height: 100vh;
+}
+
 .jumbotron {
     background-image: url("../Images/Jumbotron-background-image.jpg");
     background-size: cover;
+  }
+
+  #events-card{
+    background-image: url("../Images/Crowd-at-concert6.jpg");
+    background-size: cover;
+    color: black;
+    -webkit-text-stroke: 1px black;
+    font-size: 25px;
+    text-align: center;
+    height: 300px;
+  }
+
+  #restaurants-card{
+    background-image: url("../Images/fine-dining.jpg");
+    background-size: cover;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    font-size: 25px;
+    text-align: center;
+    height: 300px;
   }
