@@ -1,6 +1,9 @@
 const Tapi_key = "xdshV4xA76PjaILVNZCQLJMfvKXyiWU8"
 const Yapi_key = "joPjHokXrrhul1ER2zqKLt-tNwjjmYmgrBQTbNHd88SXmuSquMbPyGMELmNDno0XosGjL8sHvOd6R7Ac2uRmeTCKUTloVAWezetEkmaRbsYiXB1VYVMFmQdjhRlbY3Yx"
 var cityformEl = document.getElementById("city-form")
+var eventListEl = document.getElementById("events-list")
+var restaurantsListEl = document.getElementById("restaurants-list")
+
  cityformEl.addEventListener("submit", (event) => {
     var cityInput = document.getElementById('citySelection').value;
     event.preventDefault();
