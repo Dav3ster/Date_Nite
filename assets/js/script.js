@@ -2,7 +2,17 @@ const Tapi_key = "xdshV4xA76PjaILVNZCQLJMfvKXyiWU8"
 const Yapi_key = "joPjHokXrrhul1ER2zqKLt-tNwjjmYmgrBQTbNHd88SXmuSquMbPyGMELmNDno0XosGjL8sHvOd6R7Ac2uRmeTCKUTloVAWezetEkmaRbsYiXB1VYVMFmQdjhRlbY3Yx"
 var cityformEl = document.getElementById("city-form")
 var eventListEl = document.getElementById("events-list")
+var event1El = document.getElementById("event1")
+var event2El = document.getElementById("event2")
+var event3El = document.getElementById("event3")
+var event4El = document.getElementById("event4")
+var event5El = document.getElementById("event5")
 var restaurantsListEl = document.getElementById("restaurants-list")
+var rest1El = document.getElementById("rest1")
+var rest2El = document.getElementById("rest2")
+var rest3El = document.getElementById("rest3")
+var rest4El = document.getElementById("rest4")
+var rest5El = document.getElementById("rest5")
 
  cityformEl.addEventListener("submit", (event) => {
     var cityInput = document.getElementById('citySelection').value;
@@ -14,6 +24,7 @@ var restaurantsListEl = document.getElementById("restaurants-list")
     })
     .then(function (data) {
       console.log(data);
+      addToEvents(data)
     });
   
     fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=${cityInput}&categories="restaurants"`,{
@@ -26,6 +37,30 @@ var restaurantsListEl = document.getElementById("restaurants-list")
     })
     .then(function (data) {
       console.log(data);
+      addToRests(data)
     });
-   
 })
+
+function addToEvents (data){
+  var eventsNames = []
+  for (var i = 0; i <= 5; i++){
+    eventsNames.push(data._embedded.events[i].name)
+  }
+ event1.append(eventsNames[1])
+ event2.append(eventsNames[2])
+ event3.append(eventsNames[3])
+ event4.append(eventsNames[4])
+ event5.append(eventsNames[5])
+}
+
+function addToRests (data){
+  var restsNames = []
+  for (var i = 0; i <= 5; i++){
+    restsNames.push(data.businesses[i].name)
+  }
+ rest1.append(restsNames[1])
+ rest2.append(restsNames[2])
+ rest3.append(restsNames[3])
+ rest4.append(restsNames[4])
+ rest5.append(restsNames[5])
+}
