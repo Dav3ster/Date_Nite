@@ -27,6 +27,7 @@ body {
     background-image: url("../Images/Jumbotron-background-image.jpg");
     background-size: cover;
     height: 550px;
+    overflow-y: auto;
   }
 
   #events-card{
