@@ -29,7 +29,7 @@ cityformEl.addEventListener("submit", (event) => {
       addToEvents(data)
     })
     .catch(function(error) {
-      alert("Unable to find events");})
+      alert("Sorry, unable to find events");})
     
     fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=${cityInput}&categories="restaurants"`,{
         headers:{
@@ -44,7 +44,7 @@ cityformEl.addEventListener("submit", (event) => {
       addToRests(data)
     })
     .catch(function(error) {
-      alert("Unable to find restaurants");})
+      alert("Sorry, unable to find restaurants");})
 });
 
 
