@@ -1,5 +1,6 @@
 const Tapi_key = "xdshV4xA76PjaILVNZCQLJMfvKXyiWU8"
 const Yapi_key = "joPjHokXrrhul1ER2zqKLt-tNwjjmYmgrBQTbNHd88SXmuSquMbPyGMELmNDno0XosGjL8sHvOd6R7Ac2uRmeTCKUTloVAWezetEkmaRbsYiXB1VYVMFmQdjhRlbY3Yx"
+
 var cityformEl = document.getElementById("city-form")
 var eventListEl = document.getElementById("events-list")
 var event1El = document.getElementById("event1")
@@ -14,7 +15,8 @@ var rest3El = document.getElementById("rest3")
 var rest4El = document.getElementById("rest4")
 var rest5El = document.getElementById("rest5")
 
- cityformEl.addEventListener("submit", (event) => {
+
+cityformEl.addEventListener("submit", (event) => {
     var cityInput = document.getElementById('citySelection').value;
     event.preventDefault();
 
@@ -25,8 +27,10 @@ var rest5El = document.getElementById("rest5")
     .then(function (data) {
       console.log(data);
       addToEvents(data)
-    });
-  
+    })
+    .catch(function(error) {
+      alert("Unable to find events");})
+    
     fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=${cityInput}&categories="restaurants"`,{
         headers:{
             authorization: "Bearer " + Yapi_key
@@ -38,8 +42,11 @@ var rest5El = document.getElementById("rest5")
     .then(function (data) {
       console.log(data);
       addToRests(data)
-    });
-})
+    })
+    .catch(function(error) {
+      alert("Unable to find restaurants");})
+});
+
 
 function addToEvents (data){
   var eventsNames = []

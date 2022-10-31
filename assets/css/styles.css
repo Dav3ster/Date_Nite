@@ -5,9 +5,14 @@ body {
   min-height: 100vh;
 }
 
+#h1-header{
+  font-size: 60px;
+}
+
 .jumbotron {
     background-image: url("../Images/Jumbotron-background-image.jpg");
     background-size: cover;
+    height: 600px;
   }
 
   #events-card{
@@ -17,7 +22,7 @@ body {
     -webkit-text-stroke: 1px black;
     font-size: 25px;
     text-align: center;
-    height: 300px;
+    height: 350px;
   }
 
   #restaurants-card{
@@ -27,5 +32,5 @@ body {
     -webkit-text-stroke: 1px black;
     font-size: 25px;
     text-align: center;
-    height: 300px;
+    height: 350px;
   }
