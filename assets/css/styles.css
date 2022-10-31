@@ -7,6 +7,16 @@ body {
 
 #h1-header{
   font-size: 60px;
+  
+}
+
+#h1-header::before,
+#h1-header::after {
+    content:"💗";
+}
+
+#city-form{
+  margin-left: 35px;
 }
 
 #reset{
