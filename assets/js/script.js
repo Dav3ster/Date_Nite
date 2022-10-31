@@ -32,7 +32,7 @@ cityformEl.addEventListener("submit", (event) => {
     .catch(function(error) {
       alert("Sorry, unable to find events");})
     
-    fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=${cityInput}&categories="restaurants"`,{
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=${cityInput}&categories="restaurants&attributes="new_and_trending"`,{
         headers:{
             authorization: "Bearer " + Yapi_key
         }
