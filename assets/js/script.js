@@ -14,6 +14,7 @@ var rest2El = document.getElementById("rest2")
 var rest3El = document.getElementById("rest3")
 var rest4El = document.getElementById("rest4")
 var rest5El = document.getElementById("rest5")
+var restbuttonEl = document.getElementById("reset")
 
 
 cityformEl.addEventListener("submit", (event) => {
@@ -70,4 +71,19 @@ function addToRests (data){
  rest3.append(restsNames[3])
  rest4.append(restsNames[4])
  rest5.append(restsNames[5])
-}
+};
+
+restbuttonEl.addEventListener("click", (event) => {
+    event1El.textContent = ""
+    event2El.textContent = ""
+    event3El.textContent = ""
+    event4El.textContent = ""
+    event5El.textContent = ""
+    rest1El.textContent = ""
+    rest2El.textContent = ""
+    rest3El.textContent = ""
+    rest4El.textContent = ""
+    rest5El.textContent = ""
+    event.stopPropagation;
+    event.preventDefault();
+})

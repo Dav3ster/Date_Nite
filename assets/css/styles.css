@@ -9,6 +9,10 @@ body {
   font-size: 60px;
 }
 
+#reset{
+  margin-left: 10px;
+}
+
 .jumbotron {
     background-image: url("../Images/Jumbotron-background-image.jpg");
     background-size: cover;
@@ -30,7 +34,7 @@ body {
     background-size: cover;
     color: white;
     -webkit-text-stroke: 1px black;
-    font-size: 25px;
+    font-size: 27px;
     text-align: center;
     height: 350px;
   }
