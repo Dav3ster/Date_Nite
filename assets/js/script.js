@@ -74,16 +74,16 @@ function addToRests (data){
 };
 
 restbuttonEl.addEventListener("click", (event) => {
-    event1El.textContent = ""
-    event2El.textContent = ""
-    event3El.textContent = ""
-    event4El.textContent = ""
-    event5El.textContent = ""
-    rest1El.textContent = ""
-    rest2El.textContent = ""
-    rest3El.textContent = ""
-    rest4El.textContent = ""
-    rest5El.textContent = ""
-    event.stopPropagation;
-    event.preventDefault();
-})
+  event1El.textContent = ""
+  event2El.textContent = ""
+  event3El.textContent = ""
+  event4El.textContent = ""
+  event5El.textContent = ""
+  rest1El.textContent = ""
+  rest2El.textContent = ""
+  rest3El.textContent = ""
+  rest4El.textContent = ""
+  rest5El.textContent = ""
+  event.stopPropagation;
+  event.preventDefault();
+});
