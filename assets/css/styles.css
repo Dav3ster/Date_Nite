@@ -24,30 +24,30 @@ body {
 }
 
 .jumbotron {
-    background-image: url("../Images/Jumbotron-background-image.jpg");
-    background-size: cover;
-    height: 550px;
-    overflow-y: auto;
-  }
+  background-image: url("../Images/Jumbotron-background-image.jpg");
+  background-size: cover;
+  height: 550px;
+  overflow-y: auto;
+}
 
-  #events-card{
-    background-image: url("../Images/Crowd-at-concert6.jpg");
-    background-size: cover;
-    color: black;
-    -webkit-text-stroke: 1px black;
-    font-size: 27px;
-    text-align: center;
-    height: 400px;
-    overflow-y: auto;
-  }
+#events-card{
+  background-image: url("../Images/Crowd-at-concert6.jpg");
+  background-size: cover;
+  color: black;
+  -webkit-text-stroke: 1px black;
+  font-size: 27px;
+  text-align: center;
+  height: 400px;
+  overflow-y: auto;
+}
 
-  #restaurants-card{
-    background-image: url("../Images/fine-dining.jpg");
-    background-size: cover;
-    color: white;
-    -webkit-text-stroke: 1px black;
-    font-size: 27px;
-    text-align: center;
-    height: 400px;
-    overflow-y: auto;
-  }
+#restaurants-card{
+  background-image: url("../Images/fine-dining.jpg");
+  background-size: cover;
+  color: white;
+  -webkit-text-stroke: 1px black;
+  font-size: 27px;
+  text-align: center;
+  height: 400px;
+  overflow-y: auto;
+}
