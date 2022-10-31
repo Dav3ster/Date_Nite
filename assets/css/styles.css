@@ -27,6 +27,7 @@ body {
     font-size: 27px;
     text-align: center;
     height: 400px;
+    overflow-y: auto;
   }
 
   #restaurants-card{
@@ -37,4 +38,5 @@ body {
     font-size: 27px;
     text-align: center;
     height: 400px;
+    overflow-y: auto;
   }
