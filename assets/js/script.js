@@ -1,3 +1,4 @@
+//Below are a list of global variables anlong with our api keys
 const Tapi_key = "xdshV4xA76PjaILVNZCQLJMfvKXyiWU8"
 const Yapi_key = "joPjHokXrrhul1ER2zqKLt-tNwjjmYmgrBQTbNHd88SXmuSquMbPyGMELmNDno0XosGjL8sHvOd6R7Ac2uRmeTCKUTloVAWezetEkmaRbsYiXB1VYVMFmQdjhRlbY3Yx"
 
@@ -17,8 +18,9 @@ var rest5El = document.getElementById("rest5")
 var restbuttonEl = document.getElementById("reset")
 var citiesListEl = document.getElementById("previous-Searches")
 
+//global array for search history
 var searchHistory = []
-
+//script to manage local storage and also dynamically create our search history list
 $(document).ready(function () {
   var storedHistory = JSON.parse(localStorage.getItem("Search History"))
   searchHistory = storedHistory?storedHistory:[]
@@ -38,7 +40,7 @@ $(document).ready(function () {
     }
     document.getElementById('previous-Searches').appendChild(ol);
 }});
-
+//this is were we have our api requests, the userinput from the form is passed into the request thru the cityinput
 cityformEl.addEventListener("submit", (event) => {
     var cityInput = document.getElementById('citySelection').value;
     event.preventDefault();
@@ -69,11 +71,12 @@ cityformEl.addEventListener("submit", (event) => {
     .catch(function(error) {
       console.log("Sorry, unable to find restaurants");
     })
+    // this clears the history list on submit to make room for the new history array
     while (citiesListEl.hasChildNodes()){
       citiesListEl.removeChild(citiesListEl.firstChild);
     }
 });
-
+//here is where we are looping thru our events data and appending to our cards
 function addToEvents (data){
   var eventsNames = []
   for (var i = 0; i <= 5; i++){
@@ -87,7 +90,7 @@ function addToEvents (data){
  eventListEl.setAttribute('class', '');
  
 }
-
+//here is where we are looping thru our restaurants data and appending to our cards
 function addToRests (data){
   var restsNames = []
   for (var i = 0; i <= 5; i++){
@@ -100,7 +103,7 @@ function addToRests (data){
   rest5.append(restsNames[5])
   restaurantsListEl.setAttribute('class', '');
 };
-
+//here is where we can reset our cards and also toggle the hide class for the empty divs
 restbuttonEl.addEventListener("click", (event) => {
   event1El.textContent = ""
   event2El.textContent = ""
