@@ -7,7 +7,17 @@ body {
 
 #h1-header{
   font-size: 60px;
-  
+}
+
+.hide{
+  display: none;
+}
+
+#event1, #event2, #event3, #event4, #event5, #rest1, #rest2, #rest3, #rest4, #rest5{
+  background-color:  rgba(7, 7, 7, 0.25);
+  border-radius: 13.5px;
+  border: solid 1px black;
+  margin: 2.5px 0 2.5px 0;
 }
 
 #h1-header::before,
