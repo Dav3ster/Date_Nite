@@ -19,6 +19,17 @@ var citySelectionEl = document.getElementById("citySelection")
 
 var searchHistory = []
 
+$(document).ready(function () {
+  var storedHistory = JSON.parse(localStorage.getItem("Search History"))
+  searchHistory = storedHistory?storedHistory:[]
+  cityformEl.onsubmit = function(event){
+    event.preventDefault();
+    var city = event.target[0].value;
+    console.log(city)
+    searchHistory.push(city);
+    localStorage.setItem("Search History", JSON.stringify(searchHistory));
+}});
+
 cityformEl.addEventListener("submit", (event) => {
     var cityInput = document.getElementById('citySelection').value;
     event.preventDefault();
@@ -49,19 +60,6 @@ cityformEl.addEventListener("submit", (event) => {
     .catch(function(error) {
       alert("Sorry, unable to find restaurants");
     })
-
-    $(document).ready(function () {
-      var storedHistory = JSON.parse(localStorage.getItem("Search History"))
-      searchHistory = storedHistory?storedHistory:[]
-      cityformEl.onsubmit = function(event){
-        event.preventDefault();
-        var city = event.target.value;
-        console.log(city)
-        searchHistory.push(city);
-        localStorage.setItem("Search History", JSON.stringify(searchHistory));
-        debugger
-    }});
-
 });
 
 function addToEvents (data){
