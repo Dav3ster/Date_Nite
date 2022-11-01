@@ -52,7 +52,7 @@ cityformEl.addEventListener("submit", (event) => {
       addToEvents(data)
     })
     .catch(function(error) {
-      alert("Sorry, unable to find events");})
+      console.log("Sorry, unable to find events");})
     
     fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=${cityInput}&categories="restaurants&attributes="new_and_trending"`,{
         headers:{
@@ -67,7 +67,7 @@ cityformEl.addEventListener("submit", (event) => {
       addToRests(data)
     })
     .catch(function(error) {
-      alert("Sorry, unable to find restaurants");
+      console.log("Sorry, unable to find restaurants");
     })
     while (citiesListEl.hasChildNodes()){
       citiesListEl.removeChild(citiesListEl.firstChild);
