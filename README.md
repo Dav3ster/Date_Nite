@@ -3,10 +3,7 @@
 
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+Datenite will find big local events and the best restaurants in any city the user asks it too. We built this project so that people and their significant others or potential significant others could find easy things to do or places to eat near them immediately. If you are visiting a new city for the first time it can also be used to spontaneously help you find things to do. We were motivated by the challenge of creating a viable website that solved a real world problem and could eventually be sold to a company. We learned a great deal about using fetch requests to gather data from API's and saving that data to local storage.
 
 ## Usage
 
@@ -20,6 +17,11 @@ David Stewart https://github.com/Dav3ster
 David Truitt https://github.com/ddtruitt
 Zain Khawaja https://github.com/ZainKhawaja98
 Alegro Godley https://github.com/Galegro2022
+
+
+Yelp Fusion and Ticketmaster Event Discovery API were used in the creation of this project
+Yelp Fusion- https://www.yelp.com/developers/documentation/v3/get_started
+Ticket Master- https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/
 
 ## Deployment link
 
