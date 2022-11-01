@@ -69,6 +69,9 @@ cityformEl.addEventListener("submit", (event) => {
     .catch(function(error) {
       alert("Sorry, unable to find restaurants");
     })
+    while (citiesListEl.hasChildNodes()){
+      citiesListEl.removeChild(citiesListEl.firstChild);
+    }
 });
 
 function addToEvents (data){
@@ -113,7 +116,4 @@ restbuttonEl.addEventListener("click", (event) => {
   event.preventDefault();
   eventListEl.setAttribute('class', 'hide');
   restaurantsListEl.setAttribute('class', 'hide');
-  while (citiesListEl.hasChildNodes()){
-    citiesListEl.removeChild(citiesListEl.firstChild);
-  }
 });
