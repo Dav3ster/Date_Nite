@@ -15,7 +15,7 @@ var rest3El = document.getElementById("rest3")
 var rest4El = document.getElementById("rest4")
 var rest5El = document.getElementById("rest5")
 var restbuttonEl = document.getElementById("reset")
-var citySelectionEl = document.getElementById("citySelection")
+var citiesListEl = document.getElementById("previous-Searches")
 
 var searchHistory = []
 
@@ -28,6 +28,15 @@ $(document).ready(function () {
     console.log(city)
     searchHistory.push(city);
     localStorage.setItem("Search History", JSON.stringify(searchHistory));
+
+    var ol = document.createElement('ol');
+    for(i = 0; i < searchHistory.length; i++)
+    {
+        var li=document.createElement('li');
+        li.innerHTML = searchHistory[i];
+        ol.appendChild(li);
+    }
+    document.getElementById('previous-Searches').appendChild(ol);
 }});
 
 cityformEl.addEventListener("submit", (event) => {
@@ -104,4 +113,7 @@ restbuttonEl.addEventListener("click", (event) => {
   event.preventDefault();
   eventListEl.setAttribute('class', 'hide');
   restaurantsListEl.setAttribute('class', 'hide');
+  while (citiesListEl.hasChildNodes()){
+    citiesListEl.removeChild(citiesListEl.firstChild);
+  }
 });
