@@ -15,7 +15,9 @@ var rest3El = document.getElementById("rest3")
 var rest4El = document.getElementById("rest4")
 var rest5El = document.getElementById("rest5")
 var restbuttonEl = document.getElementById("reset")
+var citySelectionEl = document.getElementById("citySelection")
 
+var searchHistory = []
 
 cityformEl.addEventListener("submit", (event) => {
     var cityInput = document.getElementById('citySelection').value;
@@ -45,9 +47,22 @@ cityformEl.addEventListener("submit", (event) => {
       addToRests(data)
     })
     .catch(function(error) {
-      alert("Sorry, unable to find restaurants");})
-});
+      alert("Sorry, unable to find restaurants");
+    })
 
+    $(document).ready(function () {
+      var storedHistory = JSON.parse(localStorage.getItem("Search History"))
+      searchHistory = storedHistory?storedHistory:[]
+      cityformEl.onsubmit = function(event){
+        event.preventDefault();
+        var city = event.target.value;
+        console.log(city)
+        searchHistory.push(city);
+        localStorage.setItem("Search History", JSON.stringify(searchHistory));
+        debugger
+    }});
+
+});
 
 function addToEvents (data){
   var eventsNames = []
