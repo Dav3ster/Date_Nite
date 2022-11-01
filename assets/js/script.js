@@ -59,6 +59,8 @@ function addToEvents (data){
  event3.append(eventsNames[3])
  event4.append(eventsNames[4])
  event5.append(eventsNames[5])
+ eventListEl.setAttribute('class', '');
+ 
 }
 
 function addToRests (data){
@@ -66,11 +68,12 @@ function addToRests (data){
   for (var i = 0; i <= 5; i++){
     restsNames.push(data.businesses[i].name)
   }
- rest1.append(restsNames[1])
- rest2.append(restsNames[2])
- rest3.append(restsNames[3])
- rest4.append(restsNames[4])
- rest5.append(restsNames[5])
+  rest1.append(restsNames[1])
+  rest2.append(restsNames[2])
+  rest3.append(restsNames[3])
+  rest4.append(restsNames[4])
+  rest5.append(restsNames[5])
+  restaurantsListEl.setAttribute('class', '');
 };
 
 restbuttonEl.addEventListener("click", (event) => {
@@ -86,4 +89,6 @@ restbuttonEl.addEventListener("click", (event) => {
   rest5El.textContent = ""
   event.stopPropagation;
   event.preventDefault();
+  eventListEl.setAttribute('class', 'hide');
+  restaurantsListEl.setAttribute('class', 'hide');
 });
