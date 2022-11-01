@@ -10,7 +10,7 @@ Provide a short description explaining the what, why, and how of your project. U
 
 ## Usage
 
-To use DateNite, its rather simple. Just add a city to the search bar and click sumbit. If you'd like to search other options make sure to use the refresh button. 
+To use DateNite, its rather simple. Just add a city to the search bar and click submit. If you'd like to search other options make sure to use the refresh button. 
 
 ![Image](./assets/Images/ReadmeImg.png)
 
