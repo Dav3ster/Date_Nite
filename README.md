@@ -1,8 +1,6 @@
 # DateNite
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
 Datenite will find big local events and the best restaurants in any city the user asks it too. We built this project so that people and their significant others or potential significant others could find easy things to do or places to eat near them immediately. If you are visiting a new city for the first time it can also be used to spontaneously help you find things to do. We were motivated by the challenge of creating a viable website that solved a real world problem and could eventually be sold to a company. We learned a great deal about using fetch requests to gather data from API's and saving that data to local storage.
 
 ## Usage
